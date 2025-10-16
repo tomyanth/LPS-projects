@@ -1,0 +1,12 @@
+Changing the IP Address of the Management Port
+https://support.huawei.com/enterprise/en/doc/EDOC1100192869/34b56a71/changing-the-ip-address-of-the-management-port
+
+
+install fusionsphere
+https://support.huawei.com/enterprise/en/doc/EDOC1000111852/64c0ea88/fusionsphere-v60-installation-guide
+
+
+Install Hypervisor first...
+By offical way, we should install Huawei Euler OS after Hypervisor installation completion.
+
+https://support.huawei.com/enterprise/en/doc/EDOC1100467844/37f0817/installing-hypervisor
