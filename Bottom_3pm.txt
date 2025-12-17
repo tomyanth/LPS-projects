@@ -1,0 +1,550 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.10.30 15:07:23 =~=~=~=~=~=~=~=~=~=~=~=
+dis cur
+!Software Version V600R024C00SPC500
+!Last configuration was updated at 2025-10-30 07:03:45+00:00
+!Last configuration was saved at 2025-10-28 12:06:02+00:00
+#
+pki realm default
+#
+sysname cexinxdc1sv136
+#
+undo ftp server source all-interface
+undo ftp ipv6 server source all-interface
+#
+dfs-group 1
+ dual-active detection source ip 172.16.20.2 vpn-instance _management_vpn_ peer 172.16.20.1  
+ priority 120
+#
+undo set bridge-domain resource super-mode
+#
+ssl policy default
+ pki-domain default
+ ssl minimum version tls1.2
+ cipher-suite exclude key-exchange rsa
+ cipher-suite exclude cipher mode cbc
+ cipher-suite exclude hmac sha1
+  ---- More ----[16D                [16D[cexinxdc1sv136]    dis cur
+!Software Version V600R024C00SPC500
+!Last configuration was updated at 2025-10-30 07:03:45+00:00
+!Last configuration was saved at 2025-10-28 12:06:02+00:00
+#
+pki realm default
+#
+sysname cexinxdc1sv136
+#
+undo ftp server source all-interface
+undo ftp ipv6 server source all-interface
+#
+dfs-group 1
+ dual-active detection source ip 172.16.20.2 vpn-instance _management_vpn_ peer 172.16.20.1  
+ priority 120
+#
+undo set bridge-domain resource super-mode
+#
+ssl policy default
+ pki-domain default
+ ssl minimum version tls1.2
+ cipher-suite exclude key-exchange rsa
+ cipher-suite exclude cipher mode cbc
+ cipher-suite exclude hmac sha1
+  ---- More ----[16D                [16D diffie-hellman modulus 3072
+ ecdh group nist curve brainpool
+ signature algorithm-list ed25519 ed448 rsa-pss-pss-sha256 rsa-pss-pss-sha384 rsa-pss-pss-sha512 rsa-pss-rsae-sha256 rsa-pss-rsae-sha384 rsa-pss-rsae-sha512
+#
+device board 1 board-type S6730-H28X6CZ-V2
+#
+wlan
+ traffic-profile name default
+ security-profile name default
+ ssid-profile name default
+ vap-profile name default
+ regulatory-domain-profile name default
+ air-scan-profile name default
+ rrm-profile name default
+ radio-2g-profile name default
+ radio-5g-profile name default
+ ap-system-profile name default
+ port-link-profile name default
+ wired-port-profile name default
+ ap-group name default
+ provision-ap
+#
+authentication-profile name default_authen_profile
+  ---- More ----[16D                [16Dauthentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+drop-profile default
+#
+ntp server source-interface all disable
+ntp ipv6 server source-interface all disable
+#
+vlan batch 3 352 to 354 1031 to 1037 1040 1050
+#
+stp bridge-address 00e0-fc12-3458
+stp mode vbst
+#
+error-down auto-recovery cause link-flap interval 60
+#
+undo telnet server-source all-interface
+undo telnet ipv6 server-source all-interface
+#
+as-auth
+#
+  ---- More ----[16D                [16Ddiffserv domain default
+#
+ip vpn-instance _management_vpn_
+ ipv4-family
+#
+ip vpn-instance keepalive
+ ipv4-family
+#
+vlan 3
+ description MGMT
+#
+vlan 352
+ description UADS Prod
+#
+vlan 353
+ description UADS Non-Prod
+#
+vlan 354
+ description UADS server console
+#
+vlan 1031
+ description Private Subnet for Software Defined Storage
+#
+  ---- More ----[16D                [16Dvlan 1032
+ description Private Subnet for backup purpose
+#
+vlan 1033
+ description Private Subnet for heartbeat
+#
+vlan 1034
+ description Private Subnet for Air-Gap
+#
+vlan 1035
+ description NON-PROD Private Subnet for backup purpose
+#
+vlan 1036
+ description NON-PROD Private Subnet for heartbeat
+#
+vlan 1037
+ description NON-PROD Private Subnet for Air-Gap
+#
+vlan 1040
+ description Testing(Temp Use:172..)
+#
+vlan 1050
+ description Testing(Temp Use:192..)
+  ---- More ----[16D                [16D#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme default
+  accounting-scheme default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+  ---- More ----[16D                [16D#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+remote-unit
+#
+stack
+#
+license
+#
+warranty
+#
+isis purge-source-trace disable
+#
+interface Vlanif3
+ ip address 192.168.57.146 255.255.255.0
+#
+interface Vlanif352
+ ip address 10.12.124.129 255.255.255.224
+#
+interface Vlanif353
+ ip address 10.12.124.161 255.255.255.224
+  ---- More ----[16D                [16D#
+interface Vlanif354
+ ip address 192.168.89.33 255.255.255.240
+#
+interface Vlanif1031
+ ip address 172.16.1.1 255.255.255.0
+#
+interface Vlanif1032
+ ip address 172.16.2.1 255.255.255.0
+#
+interface Vlanif1033
+ ip address 172.16.3.1 255.255.255.0
+#
+interface Vlanif1034
+ ip address 172.16.4.1 255.255.255.0
+#
+interface Vlanif1035
+ ip address 172.16.5.1 255.255.255.0
+#
+interface Vlanif1036
+ ip address 172.16.6.1 255.255.255.0
+#
+interface Vlanif1037
+  ---- More ----[16D                [16D ip address 172.16.7.1 255.255.255.0
+#
+interface Vlanif1040
+ ip address 172.16.10.1 255.255.255.0
+#
+interface Vlanif1050
+ ip address 192.168.9.1 255.255.0.0
+#
+interface MEth0/0/0
+ ip binding vpn-instance _management_vpn_
+ ip address 172.16.20.2 255.255.255.0
+#
+interface Eth-Trunk0
+ description PeerLink 1
+ mode lacp-static
+ peer-link 1
+#
+interface Eth-Trunk1
+ description Port1-Access-
+ port link-type hybrid
+ port hybrid pvid vlan 354
+ port hybrid tagged vlan 352
+ port hybrid untagged vlan 354
+  ---- More ----[16D                [16D stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk2
+ description Port2-Access-
+ port link-type hybrid
+ port hybrid pvid vlan 354
+ port hybrid tagged vlan 352
+ port hybrid untagged vlan 354
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk3
+ description Port3-Access-
+ port link-type hybrid
+ port hybrid pvid vlan 354
+ port hybrid tagged vlan 352
+ port hybrid untagged vlan 354
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk5
+ description Port5-Access-V1031
+  ---- More ----[16D                [16D port link-type access
+ port default vlan 1031
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk6
+ description Port6-Access-V1031
+ port link-type access
+ port default vlan 1031
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk7
+ description Port7-Access-V1031
+ port link-type access
+ port default vlan 1031
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk9
+ description Port9-Trunk-V1032&V1033
+ port link-type trunk
+ port trunk allow-pass vlan 1032 to 1033
+  ---- More ----[16D                [16D mode lacp-dynamic
+#
+interface Eth-Trunk10
+ description Port10-Trunk-V1032&V1033
+ port link-type trunk
+ port trunk allow-pass vlan 1032 to 1033
+ mode lacp-dynamic
+#
+interface Eth-Trunk11
+ description Port11-Trunk-V1032&V1033
+ port link-type trunk
+ port trunk allow-pass vlan 1032 to 1033
+ mode lacp-dynamic
+#
+interface Eth-Trunk13
+ description Port13-Data&Management
+ port link-type hybrid
+ port hybrid pvid vlan 354
+ port hybrid tagged vlan 353
+ port hybrid untagged vlan 354
+ stp edged-port enable
+ mode lacp-dynamic
+#
+  ---- More ----[16D                [16Dinterface Eth-Trunk15
+ description Port15-Trunk-V1035&V1036
+ port link-type trunk
+ port trunk allow-pass vlan 1035 to 1036
+ mode lacp-dynamic
+#
+interface Eth-Trunk17
+ description Port17-Access-V1035
+ port link-type access
+ port default vlan 1035
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk18
+ description Port18-Access-V1034
+ port link-type access
+ port default vlan 1034
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk19
+ description Port19-Access-V1035
+ port link-type access
+  ---- More ----[16D                [16D port default vlan 1035
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk20
+ description Port20-Access-V1034
+ port link-type access
+ port default vlan 1034
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk21
+ description Port21-Access-V
+ port link-type access
+ port default vlan 354
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk22
+ description Port22-Access-V
+ port link-type access
+ port default vlan 354
+ stp edged-port enable
+  ---- More ----[16D                [16D mode lacp-dynamic
+#
+interface Eth-Trunk23
+ description Port 23-Access-V
+ port link-type access
+ port default vlan 1032
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk24
+ description Port24-Access-V
+ port link-type access
+ port default vlan 1035
+ stp edged-port enable
+ mode lacp-dynamic
+#
+interface Eth-Trunk28
+ description Port28-Trunk-Uplink
+ port link-type trunk
+ port trunk allow-pass vlan 3 352 to 354
+ mode lacp-static
+ dfs-group 1 m-lag 28
+#
+  ---- More ----[16D                [16Dinterface Stack-Port1/2
+#
+interface 10GE1/0/1
+ eth-trunk 1
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/2
+ eth-trunk 2
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/3
+ eth-trunk 3
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/4
+#
+interface 10GE1/0/5
+ eth-trunk 5
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/6
+ eth-trunk 6
+ device transceiver 10GBASE-FIBER
+  ---- More ----[16D                [16D#
+interface 10GE1/0/7
+ eth-trunk 7
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/8
+#
+interface 10GE1/0/9
+ port link-type access
+ port default vlan 1050
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/10
+ port link-type access
+ port default vlan 1050
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/11
+ port link-type access
+ port default vlan 1050
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/12
+  ---- More ----[16D                [16D#
+interface 10GE1/0/13
+ eth-trunk 13
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/14
+#
+interface 10GE1/0/15
+ eth-trunk 15
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/16
+#
+interface 10GE1/0/17
+ eth-trunk 17
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/18
+ eth-trunk 18
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/19
+ eth-trunk 19
+  ---- More ----[16D                [16D device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/20
+ eth-trunk 20
+ device transceiver 10GBASE-FIBER
+#
+interface 10GE1/0/21
+ port link-type access
+ port default vlan 354
+ device transceiver 1000BASE-T
+#
+interface 10GE1/0/22
+ port link-type access
+ port default vlan 354
+ device transceiver 1000BASE-T
+#
+interface 10GE1/0/23
+ port link-type access
+ port default vlan 354
+ device transceiver 1000BASE-T
+#
+interface 10GE1/0/24
+ port link-type access
+  ---- More ----[16D                [16D port default vlan 354
+ device transceiver 1000BASE-T
+#
+interface 10GE1/0/25
+ port link-type access
+ port default vlan 352
+ device transceiver 1000BASE-T
+#
+interface 10GE1/0/26
+#
+interface 10GE1/0/27
+ port link-type access
+ port default vlan 353
+ device transceiver 1000BASE-T
+#
+interface 10GE1/0/28
+ eth-trunk 28
+#
+interface 40GE1/0/1
+#
+interface 40GE1/0/2
+#
+interface 40GE1/0/3
+  ---- More ----[16D                [16D#
+interface 40GE1/0/4
+#
+interface 40GE1/0/5
+ eth-trunk 0
+ device transceiver 40GBASE-COPPER
+#
+interface 40GE1/0/6
+ eth-trunk 0
+ device transceiver 40GBASE-COPPER
+#
+interface NULL0
+#
+ip route-static 0.0.0.0 0.0.0.0 192.168.57.1
+#
+snmp-agent local-engineid 800007DB03B0A4F0898541
+#
+snmp-agent sys-info version v3
+#
+undo snmp-agent protocol source-status all-interface
+undo snmp-agent protocol source-status ipv6 all-interface
+#
+undo snmp-agent proxy protocol source-status all-interface
+  ---- More ----[16D                [16Dundo snmp-agent proxy protocol source-status ipv6 all-interface
+#
+#
+ssh server rsa-key min-length 3072
+undo ssh server-source all-interface
+undo ssh ipv6 server-source all-interface
+ssh authorization-type default aaa
+#
+ssh server cipher aes256_gcm aes128_gcm aes256_ctr aes192_ctr aes128_ctr
+ssh server hmac sha2_512 sha2_256
+ssh server key-exchange dh_group_exchange_sha256 dh_group16_sha512 curve25519_sha256
+#
+ssh server publickey rsa_sha2_256 rsa_sha2_512
+#
+ssh server dh-exchange min-len 3072
+#
+ssh client publickey rsa_sha2_256 rsa_sha2_512
+#
+ssh client cipher aes256_gcm aes128_gcm aes256_ctr aes192_ctr aes128_ctr
+ssh client hmac sha2_512 sha2_256
+ssh client key-exchange dh_group_exchange_sha256 dh_group16_sha512 curve25519_sha256
+#
+user-interface maximum-vty 5
+  ---- More ----[16D                [16D#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher $1d$&^+(0pt;5+TTLuN)$k$l}1(FL,15^-#LzALuE>MWl-DjpV1{O3v3GH:l-$
+#
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound ssh
+#
+ztp domain-type registration-center domain register.naas.huawei.com port 10020
+#
+load-balance inner-connect
+#
+web-manager enable port 8443
+web-manager http forward enable
+#
+return
+[cexinxdc1sv136]                      

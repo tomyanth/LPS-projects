@@ -1,0 +1,4 @@
+host table permission error
+may lead to fail access
+
+use vim to correct

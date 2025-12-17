@@ -1,0 +1,35 @@
+Huawei DCS
+VM ware
+
+version 1.2
+1.1 
+talk about how good DCS is in different scenarios
+DCS data centre solution 1:00
+SaaS（軟體即服務）eg snowflake 、IaaS（基礎設施即服務）eg ec2 in AWS 、PaaS（平台即服務）eg AWS 9:00
+
+compute network and storage 11:00
+
+NoF+
+
+lightweight and scalability 15:00
+
+VM cluster optimization 17:00
+
+VM and container dual stack pool
+light weight and at low as 2 management nodes are needed
+
+Huawei CDR disaster recovery and CSI storage integration 22:00
+
+2.2 DCS installation
+There is an audience ask for template shown in the video. However, I don't know where can I get such a template 15:00
+
+The show case seems to be checking if a DCS can be set up properly with template and checklist 17:00
+
+22:30
+prepare data
+install smartkit
+
+install DCS deployment tool
+install DCS inspection tool
+
+use smart kit to do DCS inspection 29:50

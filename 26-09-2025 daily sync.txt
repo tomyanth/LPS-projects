@@ -1,0 +1,36 @@
+26-09-2025 daily sync
+
+AA limitation 
+infra team need to add more suggestion and solution to the target that the email suggest (11:03 email)
+need samson, savian and todd endorsement (suggested by Anthony Yick)
+
+Can we mentioned AA architecture? But we actually we don't have any info except mirror IP and IP range cannot exceed /24
+Databricks does not know AA need IP is splitted into 2 subnets, IP need to mirror (2 identical IP in the 2 subnets)
+We can add facts in the email, but cannot include things that we deduce (without fact check)
+
+
+we need to know how databricks think, instead of asking them to choose an option for us. So no need to limit to those 3 options.
+
+we may need to set an environment to test out the 3 solutions, but we do not have env
+we need to remove irrelevant content from the checklist or uncheck items and jot down why those items are irrelevant.
+
+
+test plan we need to list the template.
+
+
+databricks > 2 test form > testman email (priority suggest by Anthony Yick)
+
+testplan need 1,2 example for each test cases so the client understand what's going on.
+
+at least we need to prep one case for the client and the reverse proxy case should be the easiest to set up. 
+we need to get budget for the test case experiment now or in the future.
+
+
+in short we need to get some small real show case to persuade the client.
+
+can do a small experiment with PC, to see if there is IP change.
+
+
+
+
+

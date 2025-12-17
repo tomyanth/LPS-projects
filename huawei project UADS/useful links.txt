@@ -8,5 +8,8 @@ https://support.huawei.com/enterprise/en/doc/EDOC1000111852/64c0ea88/fusionspher
 
 Install Hypervisor first...
 By offical way, we should install Huawei Euler OS after Hypervisor installation completion.
-
 https://support.huawei.com/enterprise/en/doc/EDOC1100467844/37f0817/installing-hypervisor
+
+
+default username and password
+https://support.huawei.com/enterprise/en/doc/EDOC1100323340/fd13f7b3/what-are-the-default-passwords-of-the-web-and-api-accounts-of-the-device
